@@ -38,4 +38,25 @@ public class TDDStack {
 		return contents[--size];
 	}
 
+	public int getSize() {
+		return size;
+	}
+
+	public void clear() {
+		for (int i = 0; i < MAX_CAPACITY; i++) {
+			contents[i] = 0;
+		}
+		size = 0;
+	}
+
+	public int[] getContents() {
+		return contents;
+	}
+	
+	public void fillFullContents() {
+		for(int i = 0; i < MAX_CAPACITY; i++) {
+			contents[i] = i + 10;
+		}
+	}
+
 }
